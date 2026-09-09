@@ -4,9 +4,12 @@
     --color-body: #2d0e0e;
     --color-text: #751919;
     --color-card: #150404;
+    --color-mini: black;
     --color-main: rgb(19, 6, 6);
     --color-header: #412424e4;
     --color-links: #b7acac;
+    --color-footer: #6d4848e4;
+    --color-shadow:rgb(209, 171, 171);
     --font-display: 'Barriecito', Arial, sans-serif;
     --font-body: 'Caveat Brush', Arial, sans-serif;
     --font-card: 'Road Rage', Arial, sans-serif;
@@ -22,10 +25,14 @@
     margin: 0;
     padding: 0;
  }
+
+ h2 {
+    color: var(--color-links);
+    font-family: var(--font-display);
+ }
  
 .header {
     background-color: var(--color-header);
-    color: var(--color-body);
     padding: 6px;
     display: flex;
     align-items: center;
@@ -56,16 +63,17 @@
     color: var(--color-text);
     background-color: var(--color-main);
     justify-content: space-between;
-    gap: 20px;
+    gap: 23px;
     align-items: center;
-    padding: 10px;
+    padding: 45px;
+    margin-bottom: 2em;
     border-radius: 10px;
     transition: box-shadow 0.3s ease;
     overflow: hidden;
 }
 
-.main-content:hover{
-    box-shadow: 0 0 20px rgb(209, 171, 171);
+.main-content:hover {
+    box-shadow: 0 0 20px var(--color-shadow);
 }
 .avengers-image {
     width: auto;
@@ -74,15 +82,116 @@
     transition: transform 0.5s ease;
 }
 
-.avengers-image:hover{
+.avengers-image:hover {
     transform:scale(1.2);
 }
 
-.nav-links a:hover{
-    color: var(--color-links);
-}
-
-a{
+.header a {
     text-decoration: none;
     color: var(--color-body);
 }
+
+.nav-links a:hover {
+    color: var(--color-links);
+}
+
+.crescendo, .cards {
+    background-color: var(--color-card);
+    padding: 3rem 0 3rem 2rem;
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: #e48f8f #180202;
+    scrollbar-width: none;
+}
+
+/* .crescendo, .cards::-webkit-scrollbar {
+    display: none;
+} */
+
+.cards{
+    max-width: auto;
+    padding: 45px;
+    border-radius: 20px;
+    display: flex;
+    flex-shrink: 0;
+}
+.cinema {
+    margin-right: 64px;
+}
+
+.cinema img {
+    width: auto;
+    max-height: 150px;
+    border-radius: 8px;
+}
+
+.content-logo {
+    width: auto;
+    height: 260px;
+    background-color: #1e1010;
+    transition: transform 0.5s ease;
+}
+
+.content-logo:hover {
+    transform:scale(1.2);
+}
+
+.mini-card {
+    font-family: var(--font-card);
+    background-color: var(--color-mini);
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-left: -25px;
+    border-radius: 16px;
+    box-shadow: -2rem 0 5rem -1rem var(--color-shadow);
+    transition: transform 0.8s ease;
+}
+
+.cards article:first-child:hover {
+    transform: translateY(-10px) scale(1.2) rotate(360deg);
+    background-color: var(--color-shadow);
+}
+
+.mini-card:hover {
+    transform: translateY(-15px) scale(1.2) rotate(18deg);
+    background-color: var(--color-shadow);
+}
+
+.quote {
+    background-color: var(--color-main);
+    font-family: var(--font-card);
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 2px;
+    padding: 23px;
+    border-radius: 0 0 8px 8px;
+}
+
+.join-us-section {
+    background-color: var(--color-body);
+    padding: 5px;
+}
+
+.join-us-section h4 {
+    font-family: var(--font-display);
+}
+
+.join-us-section a {
+    text-decoration: none;
+    color: black;
+}
+
+.join-us-section a:hover {
+    color: var(--color-links);
+}
+
+.footer {
+    background-color: var(--color-footer);
+    text-align: center;
+    padding: 8px;
+}
+
