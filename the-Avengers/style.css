@@ -151,10 +151,10 @@
     transition: transform 0.8s ease;
 }
 
-.cards article:first-child:hover {
+/* .cards article:first-child:hover {
     transform: translateY(-10px) scale(1.2) rotate(360deg);
     background-color: var(--color-shadow);
-}
+} */
 
 .mini-card:hover {
     transform: translateY(-15px) scale(1.2) rotate(18deg);
@@ -166,12 +166,12 @@
     height: 65px;
     border-radius: 12px;
     margin: 0;
-    margin-left: 13px;
+    margin-left: 2px;
     transition: transform 0.8s ease;
 }
 
 .hero img:hover {
-    transform: translate(-10px) scale(0.8);
+    transform: translateZ(30px) scale(1.2);
 }
 
 .quote {
