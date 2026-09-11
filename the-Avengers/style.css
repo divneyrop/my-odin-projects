@@ -161,6 +161,19 @@
     background-color: var(--color-shadow);
 }
 
+.hero img {
+    width: 87px;
+    height: 65px;
+    border-radius: 12px;
+    margin: 0;
+    margin-left: 13px;
+    transition: transform 0.8s ease;
+}
+
+.hero img:hover {
+    transform: translate(-10px) scale(0.8);
+}
+
 .quote {
     background-color: var(--color-main);
     font-family: var(--font-card);
